@@ -118,7 +118,7 @@ type tScreen struct {
 }
 
 func (t *tScreen) Init() error {
-	t.evch = make(chan Event, 10)
+	t.evch = make(chan Event, 100)
 	t.indoneq = make(chan struct{})
 	t.keychan = make(chan []byte, 10)
 	t.keytimer = time.NewTimer(time.Millisecond * 50)

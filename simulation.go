@@ -108,7 +108,7 @@ type simscreen struct {
 }
 
 func (s *simscreen) Init() error {
-	s.evch = make(chan Event, 10)
+	s.evch = make(chan Event, 100)
 	s.quit = make(chan struct{})
 	s.fillchar = 'X'
 	s.fillstyle = StyleDefault

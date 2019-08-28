@@ -129,7 +129,7 @@ func NewConsoleScreen() (Screen, error) {
 }
 
 func (s *cScreen) Init() error {
-	s.evch = make(chan Event, 10)
+	s.evch = make(chan Event, 100)
 	s.quit = make(chan struct{})
 	s.scandone = make(chan struct{})
 
